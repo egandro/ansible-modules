@@ -32,7 +32,7 @@ from here on just use `. .python-venv/bin/activate`
 
 ```bash
 ansible-galaxy init --init-path roles roleXXX
-# add roleXXX in meta/meta.yml
+# add roleXXX in meta/main.yml
 ```
 
 ## use the roles
