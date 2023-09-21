@@ -1,2 +1,2 @@
 dependencies:
-  - role: hello-world
+  - role: hello_world
