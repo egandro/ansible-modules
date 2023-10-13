@@ -1,12 +1,8 @@
-# Ansible Sample Modules
+# Ansible Sample Collection
 
 Use this with:
 
 - <https://github.com/egandro/ansible-tutorial>
-
-Idea from:
-
-- <https://blog.ruanbekker.com/blog/2022/04/19/publish-and-use-your-ansible-role-from-git/>
 
 ## Ansible / Python setup
 
@@ -28,23 +24,29 @@ pip install --quiet -r requirements.**txt**
 
 from here on just use `. .python-venv/bin/activate`
 
+## initial collection setup
+
+```bash
+ansible-galaxy collection init egandro.ansible_collection
+```
+
+- open `galaxy.yml` add change according to your needs
+
 ## new role
 
 ```bash
 ansible-galaxy init --init-path roles roleXXX
-# add roleXXX in meta/main.yml
 ```
 
-## use the roles
+## use the collection
 
 - create a `./collections/requirements.yml` file in your project
 
 ```yml
 #  ansible-galaxy install -r ./collections/requirements.yml --force
 ---
-roles:
-  - name: my-common-roles
-    src: https://github.com/egandro/common-ansible
+collections:
+  - name: https://github.com/egandro/ansible_collection.git
+    type: git
     version: main
-    scm: git
 ```
