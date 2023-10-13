@@ -54,4 +54,16 @@ collections:
 Sample Playbook
 
 ```yml
+# ansible-playbook hello-world.yml
+---
+- name: sample book
+  hosts: localhost
+  gather_facts: false
+  connection: local
+
+  roles:
+    # full namespace of the role
+    - role: egandro.ansible_tutorial_collection.hello_world
+      vars:
+        my_var: foo
 ```
