@@ -27,7 +27,7 @@ from here on just use `. .python-venv/bin/activate`
 ## initial collection setup
 
 ```bash
-ansible-galaxy collection init egandro.ansible_collection
+ansible-galaxy collection init egandro.ansible_tutorial_collection
 ```
 
 - open `galaxy.yml` add change according to your needs
@@ -46,7 +46,12 @@ ansible-galaxy init --init-path roles roleXXX
 #  ansible-galaxy install -r ./collections/requirements.yml --force
 ---
 collections:
-  - name: https://github.com/egandro/ansible_collection.git
+  - name: https://github.com/egandro/ansible-tutorial-collection.git
     type: git
     version: main
+```
+
+Sample Playbook
+
+```yml
 ```
